@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutPage() {
   return (
@@ -35,7 +36,7 @@ export default function AboutPage() {
               />
             </div>
             <div className="absolute -bottom-8 -right-8 hidden rounded-sm bg-surfaceContainerHigh p-8 md:block">
-              <p className="text-3xl font-serif italic">1924</p>
+              <p className="text-3xl font-serif italic">2020</p>
               <p className="text-[10px] uppercase tracking-[0.35em] text-primary">THE ORIGIN</p>
             </div>
           </div>
@@ -49,9 +50,9 @@ export default function AboutPage() {
                 We do not measure our success in units, but in the decades a single pair remains in service. It is an inheritance of technique, a lineage of aesthetic restraint that refuses the lure of the ephemeral.
               </p>
             </div>
-            <a className="relative inline-block text-[10px] uppercase tracking-[0.35em] text-primary" href="#">
+            <Link href="/contact" className="relative inline-block text-[10px] uppercase tracking-[0.35em] text-primary">
               Explore the Archives
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export default function HomePage() {
@@ -22,12 +23,12 @@ export default function HomePage() {
               The Art of the <span className="italic font-light">Bespoke Step</span>
             </h1>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button className="rounded-sm bg-gradient-to-br from-primary to-primaryContainer px-8 py-4 text-[10px] uppercase tracking-[0.3em] text-black transition duration-500 hover:scale-[1.03]">
+              <Link href="/shop" className="rounded-sm bg-gradient-to-br from-primary to-primaryContainer px-8 py-4 text-[10px] uppercase tracking-[0.3em] text-black transition duration-500 hover:scale-[1.03]">
                 Shop Collection
-              </button>
-              <button className="rounded-sm border border-[#4e4639]/30 px-8 py-4 text-[10px] uppercase tracking-[0.3em] transition duration-500 hover:bg-white/5 hover:scale-[1.02]">
+              </Link>
+              <Link href="/contact" className="rounded-sm border border-[#4e4639]/30 px-8 py-4 text-[10px] uppercase tracking-[0.3em] transition duration-500 hover:bg-white/5 hover:scale-[1.02]">
                 Design Your Pair
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -39,9 +40,9 @@ export default function HomePage() {
             <p className="text-[10px] uppercase tracking-[0.3em] text-primary">Curated Selections</p>
             <h2 className="mt-4 text-4xl font-serif text-onSurface">Seasonal Editions</h2>
           </div>
-          <a className="text-[10px] uppercase tracking-[0.3em] text-primary border-b border-primary/30 pb-1 transition hover:border-primary" href="#">
+          <Link href="/shop" className="text-[10px] uppercase tracking-[0.3em] text-primary border-b border-primary/30 pb-1 transition hover:border-primary">
             View All
-          </a>
+          </Link>
         </div>
 
         <div className="mt-16 grid gap-12 xl:grid-cols-[7fr_5fr]">
@@ -116,10 +117,10 @@ export default function HomePage() {
             <p className="max-w-2xl text-lg font-light leading-relaxed text-stone-400">
               ADEN was founded on the belief that luxury is not loud. It is found in the weight of the last, the suppleness of the calfskin, and the patience of a master who has spent forty years perfecting a single welt.
             </p>
-            <button className="inline-flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-onSurface transition hover:text-primary">
+            <Link href="/about" className="inline-flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-onSurface transition hover:text-primary">
               Explore Our Craft
               <span className="block h-px w-16 bg-primary transition-all group-hover:w-20" />
-            </button>
+            </Link>
           </div>
         </div>
       </AnimatedSection>

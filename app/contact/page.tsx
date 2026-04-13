@@ -63,9 +63,9 @@ export default function ContactPage() {
             />
           </label>
           <div className="mt-10 flex justify-center">
-            <button className="rounded-sm bg-gradient-to-br from-primary to-primaryContainer px-12 py-4 text-[10px] uppercase tracking-[0.35em] text-black transition hover:scale-[1.02]">
+            <a href="mailto:atelier@aden.com" className="rounded-sm bg-gradient-to-br from-primary to-primaryContainer px-12 py-4 text-[10px] uppercase tracking-[0.35em] text-black transition hover:scale-[1.02]">
               Request Private Session
-            </button>
+            </a>
           </div>
         </div>
       </section>

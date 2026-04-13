@@ -23,9 +23,6 @@ export default function Navbar() {
           <Link href="/shop" className="inline-flex items-center justify-center rounded-full p-2 transition-transform hover:scale-105">
             <span className="material-symbols-outlined">shopping_bag</span>
           </Link>
-          <button className="inline-flex items-center justify-center rounded-full p-2 transition-transform hover:scale-105">
-            <span className="material-symbols-outlined">person</span>
-          </button>
         </div>
       </div>
     </header>

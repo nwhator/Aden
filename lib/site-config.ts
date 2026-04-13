@@ -15,7 +15,6 @@ export const siteConfig = {
     { label: 'Shop', href: '/shop' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Admin', href: '/admin' },
   ] as NavLink[],
   footerLinks: [
     { label: 'Privacy Policy', href: '/privacy' },
