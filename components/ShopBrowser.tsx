@@ -7,14 +7,12 @@ import type { Product } from '@/lib/types';
 const styleOptions = ['Oxford', 'Loafers', 'Boots', 'Monk Strap'];
 const materialOptions = ['Box Calf', 'French Suede', 'Grain Leather'];
 const colorOptions = [
-  { label: 'Obsidian', bgClass: 'bg-slate-900' },
-  { label: 'Bordeaux', bgClass: 'bg-rose-900' },
-  { label: 'Chestnut', bgClass: 'bg-orange-800' },
-  { label: 'Sand', bgClass: 'bg-amber-300' },
-  { label: 'Midnight', bgClass: 'bg-slate-800' },
-  { label: 'Ivory', bgClass: 'bg-amber-100' },
-  { label: 'Slate', bgClass: 'bg-slate-600' },
-  { label: 'Camel', bgClass: 'bg-amber-700' },
+  { label: 'Black', bgClass: 'bg-slate-900' },
+  { label: 'Brown', bgClass: 'bg-amber-900' },
+  { label: 'Silver', bgClass: 'bg-slate-400' },
+  { label: 'Purple', bgClass: 'bg-violet-700' },
+  { label: 'Gold', bgClass: 'bg-yellow-500' },
+  { label: 'Navy', bgClass: 'bg-sky-950' },
 ];
 
 export default function ShopBrowser({ products }: { products: Product[] }) {
@@ -115,24 +113,19 @@ export default function ShopBrowser({ products }: { products: Product[] }) {
 
           <section className="space-y-4">
             <h2 className="text-[10px] uppercase tracking-[0.35em] text-stone-400">Color</h2>
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
               {colorOptions.map((option) => (
                 <button
                   key={option.label}
                   type="button"
                   onClick={() => setSelectedColor((current) => (current === option.label ? '' : option.label))}
-                  className={`group flex h-12 w-full flex-col items-center justify-center rounded-full border transition ${
-                    selectedColor === option.label
-                      ? 'border-primary bg-white/10'
-                      : 'border-white/10 hover:border-primary/70'
-                  }`}
+                  className={`group relative flex h-14 w-full items-center justify-center rounded-full border border-white/10 transition ${
+                    selectedColor === option.label ? 'shadow-[0_0_0_2px_rgba(233,193,118,0.9)]' : 'hover:shadow-[0_0_0_2px_rgba(233,193,118,0.4)]'
+                  } ${option.bgClass}`}
                 >
-                  <span
-                    className={`mx-auto mb-1 h-6 w-6 rounded-full ${option.bgClass} shadow-inner shadow-black/30`}
-                  />
-                  <span className="text-[10px] uppercase tracking-[0.35em] text-stone-300">
-                    {option.label}
-                  </span>
+                  <span className="sr-only">{option.label}</span>
+                  <span className="absolute inset-0 rounded-full opacity-90" />
+                  <span className="relative h-2.5 w-2.5 rounded-full bg-white/90 shadow-sm" />
                 </button>
               ))}
             </div>
