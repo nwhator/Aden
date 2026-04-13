@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import CustomizationForm from '@/components/CustomizationForm';
+import AddToCartButton from '@/components/AddToCartButton';
 import { getProductById } from '@/lib/product-service';
 
 type Props = {
@@ -56,9 +57,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="rounded-sm border-t border-[#2a2a2a] pt-6 text-sm text-stone-400">
             <p className="mb-2 text-[10px] uppercase tracking-[0.35em] text-primary">Bespoke Fit</p>
             <p>Complimentary sizing kit included with every order.</p>
-            <button className="mt-6 w-full rounded-sm border border-[#4e4639] px-5 py-4 text-[10px] uppercase tracking-[0.35em] transition hover:bg-white/5">
-              Add to Cart — {product.price}
-            </button>
+            <AddToCartButton product={product} />
           </div>
         </aside>
       </section>

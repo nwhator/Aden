@@ -4,6 +4,8 @@ import { Manrope, Noto_Serif } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { CartProvider } from '@/components/CartContext';
+import CartDrawer from '@/components/CartDrawer';
 
 const notoSerif = Noto_Serif({
   subsets: ['latin'],
@@ -26,11 +28,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${notoSerif.variable} ${manrope.variable}`}>
       <body className="bg-surface text-onSurface font-body">
-        <div className="min-h-screen bg-surface">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <CartProvider>
+          <div className="min-h-screen bg-surface">
+            <Navbar />
+            {children}
+            <Footer />
+            <CartDrawer />
+          </div>
+        </CartProvider>
       </body>
     </html>
   );
