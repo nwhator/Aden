@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  font-feature-settings: 'liga';
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: none;
+}
 
 :root {
   color-scheme: dark;
