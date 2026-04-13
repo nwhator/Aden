@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import CustomizationForm from '@/components/CustomizationForm';
-import { products } from '@/lib/products';
+import { getProductById } from '@/lib/product-service';
 
 type Props = {
   params: {
@@ -9,12 +9,8 @@ type Props = {
   };
 };
 
-export function generateStaticParams() {
-  return products.map((product) => ({ id: product.id }));
-}
-
-export default function ProductPage({ params }: Props) {
-  const product = products.find((item) => item.id === params.id);
+export default async function ProductPage({ params }: Props) {
+  const product = await getProductById(params.id);
 
   if (!product) {
     notFound();

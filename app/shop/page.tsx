@@ -1,7 +1,9 @@
 import ProductGrid from '@/components/ProductGrid';
-import { featuredProducts } from '@/lib/products';
+import { getProducts } from '@/lib/product-service';
 
-export default function ShopPage() {
+export default async function ShopPage() {
+  const products = await getProducts();
+
   return (
     <main className="pt-28 pb-24 bg-surface text-onSurface">
       <section className="mx-auto max-w-7xl px-6 pb-20 md:px-12">
@@ -55,7 +57,7 @@ export default function ShopPage() {
           </aside>
 
           <section className="space-y-14">
-            <ProductGrid products={featuredProducts} />
+            <ProductGrid products={products} />
           </section>
         </div>
       </section>
