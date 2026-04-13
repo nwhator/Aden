@@ -3,6 +3,16 @@
 -- Enable UUID generation for Supabase/Postgres
 create extension if not exists pgcrypto;
 
+-- Users table for admin/customer metadata
+create table if not exists users (
+  id uuid primary key default gen_random_uuid(),
+  email text unique not null,
+  full_name text,
+  role text default 'customer' not null,
+  created_at timestamp with time zone default timezone('utc', now()) not null,
+  updated_at timestamp with time zone default timezone('utc', now()) not null
+);
+
 -- Products table
 create table if not exists products (
   id uuid primary key default gen_random_uuid(),
@@ -56,14 +66,4 @@ create table if not exists order_items (
   unit_price numeric(10,2) not null,
   line_total numeric(12,2) not null,
   created_at timestamp with time zone default timezone('utc', now()) not null
-);
-
--- Users table for admin/customer metadata
-create table if not exists users (
-  id uuid primary key default gen_random_uuid(),
-  email text unique not null,
-  full_name text,
-  role text default 'customer' not null,
-  created_at timestamp with time zone default timezone('utc', now()) not null,
-  updated_at timestamp with time zone default timezone('utc', now()) not null
 );
