@@ -6,7 +6,16 @@ import type { Product } from '@/lib/types';
 
 const styleOptions = ['Oxford', 'Loafers', 'Boots', 'Monk Strap'];
 const materialOptions = ['Box Calf', 'French Suede', 'Grain Leather'];
-const colorOptions = ['Obsidian', 'Bordeaux', 'Black', 'Chestnut'];
+const colorOptions = [
+  { label: 'Obsidian', bgClass: 'bg-slate-900' },
+  { label: 'Bordeaux', bgClass: 'bg-rose-900' },
+  { label: 'Chestnut', bgClass: 'bg-orange-800' },
+  { label: 'Sand', bgClass: 'bg-amber-300' },
+  { label: 'Midnight', bgClass: 'bg-slate-800' },
+  { label: 'Ivory', bgClass: 'bg-amber-100' },
+  { label: 'Slate', bgClass: 'bg-slate-600' },
+  { label: 'Camel', bgClass: 'bg-amber-700' },
+];
 
 export default function ShopBrowser({ products }: { products: Product[] }) {
   const [selectedStyle, setSelectedStyle] = useState<string>('');
@@ -107,14 +116,23 @@ export default function ShopBrowser({ products }: { products: Product[] }) {
           <section className="space-y-4">
             <h2 className="text-[10px] uppercase tracking-[0.35em] text-stone-400">Color</h2>
             <div className="grid grid-cols-4 gap-3">
-              {colorOptions.map((label) => (
+              {colorOptions.map((option) => (
                 <button
-                  key={label}
+                  key={option.label}
                   type="button"
-                  onClick={() => setSelectedColor((current) => (current === label ? '' : label))}
-                  className={`rounded-full px-3 py-2 text-[10px] uppercase tracking-[0.35em] transition ${selectedColor === label ? 'bg-primary text-black' : 'bg-[#101010] text-stone-300 hover:bg-white/5'}`}
+                  onClick={() => setSelectedColor((current) => (current === option.label ? '' : option.label))}
+                  className={`group flex h-12 w-full flex-col items-center justify-center rounded-full border transition ${
+                    selectedColor === option.label
+                      ? 'border-primary bg-white/10'
+                      : 'border-white/10 hover:border-primary/70'
+                  }`}
                 >
-                  {label}
+                  <span
+                    className={`mx-auto mb-1 h-6 w-6 rounded-full ${option.bgClass} shadow-inner shadow-black/30`}
+                  />
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-stone-300">
+                    {option.label}
+                  </span>
                 </button>
               ))}
             </div>
