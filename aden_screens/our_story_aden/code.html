@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@200;300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#131313",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#4e4541",
+                    "surface-bright": "#3a3939",
+                    "on-secondary": "#372f2b",
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline-variant": "#4e4639",
+                    "primary-fixed-dim": "#e9c176",
+                    "secondary-fixed": "#eedfda",
+                    "error": "#ffb4ab",
+                    "primary-fixed": "#ffdea5",
+                    "primary": "#e9c176",
+                    "surface-tint": "#e9c176",
+                    "inverse-primary": "#775a19",
+                    "on-surface-variant": "#d1c5b4",
+                    "outline": "#9a8f80",
+                    "on-secondary-fixed": "#211a17",
+                    "secondary": "#d2c4bf",
+                    "on-tertiary-fixed-variant": "#4c463d",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-container": "#403a32",
+                    "tertiary-fixed": "#ece1d5",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-fixed": "#261900",
+                    "on-primary-container": "#4e3700",
+                    "on-tertiary": "#352f27",
+                    "inverse-surface": "#e5e2e1",
+                    "background": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "tertiary-container": "#ada499",
+                    "on-primary": "#412d00",
+                    "surface-container-highest": "#353534",
+                    "surface-variant": "#353534",
+                    "secondary-container": "#514743",
+                    "tertiary": "#cfc5b9",
+                    "surface-container": "#201f1f",
+                    "surface-dim": "#131313",
+                    "on-tertiary-fixed": "#201b13",
+                    "surface-container-low": "#1c1b1b",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-fixed-dim": "#d2c4bf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-tight { font-family: 'Noto Serif', serif; letter-spacing: -0.02em; }
+        .label-tracking { font-family: 'Manrope', sans-serif; letter-spacing: 0.1em; }
+        .glass-nav { backdrop-filter: blur(40px); }
+        .soft-scale:hover { transform: scale(1.05); transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1); }
+        .center-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 50%;
+            background-color: #e9c176;
+            transition: all 0.4s ease;
+        }
+        .center-underline:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-2xl dark:bg-stone-950/80 flex justify-between items-center w-full px-12 py-6">
+<div class="text-2xl font-serif tracking-widest text-[#e9c176] uppercase">ADEN</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-xs tracking-[0.1em] uppercase Manrope text-stone-400 hover:text-stone-100 transition-colors duration-500" href="#">Shop</a>
+<a class="text-xs tracking-[0.1em] uppercase Manrope text-stone-400 hover:text-stone-100 transition-colors duration-500" href="#">Craftsmanship</a>
+<a class="text-xs tracking-[0.1em] uppercase Manrope text-[#e9c176] border-b border-[#e9c176] pb-1" href="#">About</a>
+<a class="text-xs tracking-[0.1em] uppercase Manrope text-stone-400 hover:text-stone-100 transition-colors duration-500" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-amber-200 dark:text-[#e9c176] soft-scale">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="text-amber-200 dark:text-[#e9c176] soft-scale">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="min-height-[921px] flex flex-col items-center justify-center text-center px-6 py-32 relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="Close-up of weathered hands stitching dark leather with a silver needle in a dimly lit artisan workshop with dust motes in the air." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrxE6pUUy2AU1KOX9am5Mj3w2-XCJ7PX2GR0Ymrlo68YtdJ4wmP5CwGG4f_FUakfl49H63zxwPl5nxqArlPYnKAMS-SzCNVEtPPTpd1jscODd1_eoqlz6NfLhY7XCi72uy94pHmP2MaTdOw1vrsGgkeLtXE73cccj2z_KjHVh8i0vV-rptk_YBekDIJG7qU6wQ8Ib5HsnuqGQxbstDSPNbo8_YnQSvwrkbo_mu5swjyX5eE42DP2P0VK56DQa-kFFTC8Kl71v9IWQ"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="label-tracking text-primary uppercase text-[10px] mb-8">The Philosophy of Form</p>
+<h1 class="serif-tight text-5xl md:text-8xl mb-8 leading-[1.1]">Where Time Becomes <br/><span class="italic font-normal">Material</span></h1>
+<p class="max-w-xl mx-auto text-secondary text-sm md:text-base leading-relaxed opacity-80">
+                    ADEN was founded on a singular premise: that the most personal object a person can own is the one that carries them through the world.
+                </p>
+</div>
+</section>
+<!-- The Heritage: Asymmetric Narrative -->
+<section class="py-32 px-8 md:px-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 relative">
+<div class="bg-surface-container-low p-2">
+<img alt="" class="w-full aspect-[3/4] object-cover" data-alt="Vintage black and white photography of shoemaking lasts and archival leather patterns on a dark wooden bench with dramatic side lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0NR1eO1JygbXtgRVkEbU_J0aVBhNHPFWkXwMEoIlM5ULGc_K3nEwBmRW7XBxQm7MIJmJHA-f-YMlQhI0tfh65_aqxk72EhTP2WhkmvGP81utpO1P9TXtIxUcHF8yT6COztdq-uMykiOpvXxQBq2B9XBTipWx5w9wx7R-2GCYf-RkETdP6XSGSXKycINkzGYW6CSqleii1bGEyHkFqvqU-wfJAOBlH9TFRGWHpSO4XZ7IoXRdyXEw3ERVSvlJYzrVa_o1z4of92tQ"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-surface-container-high p-8 hidden md:block">
+<p class="serif-tight text-3xl italic">1924</p>
+<p class="label-tracking text-[10px] text-primary">THE ORIGIN</p>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7">
+<h2 class="serif-tight text-4xl md:text-6xl mb-10">The Heritage</h2>
+<div class="space-y-6 text-secondary/90 leading-relaxed font-light">
+<p>Our story does not begin in a factory, but in the quiet of a cellar where the scent of oak-tanned leather and beeswax was the only currency. For three generations, ADEN has preserved the vanishing techniques of hand-welted construction.</p>
+<p>We do not measure our success in units, but in the decades a single pair remains in service. It is an inheritance of technique, a lineage of aesthetic restraint that refuses the lure of the ephemeral.</p>
+</div>
+<div class="mt-12">
+<a class="relative inline-block label-tracking text-[10px] uppercase text-primary center-underline py-2" href="#">Explore the Archives</a>
+</div>
+</div>
+</div>
+</section>
+<!-- The Workshop: Immersive Visuals -->
+<section class="bg-surface-container-lowest py-32 px-8 md:px-24">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="serif-tight text-4xl md:text-6xl mb-4">The Workshop</h2>
+<p class="label-tracking text-primary uppercase text-[10px]">A Temple of Silence and Steel</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tool Detail -->
+<div class="space-y-6">
+<div class="overflow-hidden group">
+<img alt="" class="w-full aspect-square object-cover transition-transform duration-[800ms] group-hover:scale-110" data-alt="Macro photography of brass awls and custom shoemaking knives resting on a slab of dark marble with warm golden highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkUZSkSUs4y9r6pymNhp8_cUCSE2rObfDI4VC730NtCWsTeF7Dx6vQKBiXrk922uZDTju7aYtcILpbxUpeDw7i1lctmF1tPOU2hx77hzqi9sNf7fgSgyWDmGPz5uQrBWB46bnHk9Ev2920eRfkXqQx8GVQxJJ5DBDrbUO46RoWYfbbvMf_eAgwI1s_97jvzJtJwQE4NHoQgMq_BoR_Web-ZYXBpTAa50zRQo8W_MxrNbSKID5KADl_fPbv4bujKSiT6GiAXzom_aI"/>
+</div>
+<h3 class="serif-tight text-xl">The Precision</h3>
+<p class="text-sm text-secondary/70 leading-relaxed">Each tool is an extension of the artisan's hand, worn down over decades to fit the specific grip of its master.</p>
+</div>
+<!-- Leather Detail -->
+<div class="space-y-6 md:translate-y-12">
+<div class="overflow-hidden group">
+<img alt="" class="w-full aspect-square object-cover transition-transform duration-[800ms] group-hover:scale-110" data-alt="Close-up texture of high-grade full-grain leather showing organic patterns and a deep mahogany luster in soft studio light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw5hdO40FeUB_3eWtsNi2M_xt9SX7uMRiRaBlWPK5OR4JUurQNu_R65HtK7v5TMXiCSlHIL1xRhTWZnqN3uWzstOb3taQC8vKbZtPjxTNuHFMpkSX_V7Oe05N2S9PlRwf25je-45e_w7mf61nPq3Sj5se8xJblmYG8jWZwN5bBUFWTgCpCylrURVofQx1qSIU45e8Yj1Su9DOA8ppR0ridCt5pYN27-XJ3qQWu2wxglGk-2ZdQEQ_7WilejAb2yb0Qu_XUsmpfNaA"/>
+</div>
+<h3 class="serif-tight text-xl">The Raw</h3>
+<p class="text-sm text-secondary/70 leading-relaxed">We source exclusively from tanneries that still use vegetable barks, a process that takes months rather than days.</p>
+</div>
+<!-- Finished Detail -->
+<div class="space-y-6">
+<div class="overflow-hidden group">
+<img alt="" class="w-full aspect-square object-cover transition-transform duration-[800ms] group-hover:scale-110" data-alt="Detailed shot of hand-welted stitching along the edge of a bespoke oxford shoe sole, showing perfect geometric precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp-r7nwgjBO5jPbU4U1xL_Vk4-rPh2f4SFuhGFrdq2aZxyv_4n3zibPQRWAUZOIrBsGEVuq8s4yAl3jrXCKLlRYDuSGi4hc0mYFuHIBLf51ecV1f0O6yfV9XY5ANNUrQuu-NdJkBsa8GdIRui71DjqNZItvK2s9h6eBUY6C_5QE7O3UYjMq_bVLUKjo2a6pNdGmx6hlydPX-J-Yym1kfQ5saPVFAhlwHwEb57r0htZJBebw9pswaWT4FRkAqQe7gfG3QRCjd6cQ7o"/>
+</div>
+<h3 class="serif-tight text-xl">The Finish</h3>
+<p class="text-sm text-secondary/70 leading-relaxed">The final polish is applied by hand using a combination of friction and bone, creating a mirror shine that breathes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Artisan: Personal Quote/Editorial -->
+<section class="py-48 px-8 md:px-24 bg-surface overflow-hidden">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" data-icon="format_quote">format_quote</span>
+<blockquote class="serif-tight text-3xl md:text-5xl leading-tight mb-12 italic text-on-surface">
+                        "In a world of mass-produced noise, a bespoke shoe is a quiet conversation between the maker and the wearer. We don't just build footwear; we map a life."
+                    </blockquote>
+<div class="flex items-center gap-4">
+<div class="h-[1px] w-12 bg-primary"></div>
+<div>
+<p class="label-tracking text-[10px] uppercase text-on-surface">Elias Aden</p>
+<p class="text-[10px] text-stone-500 uppercase tracking-widest">Master Cordwainer</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<img alt="" class="w-full aspect-[4/5] object-cover grayscale" data-alt="Moody cinematic portrait of an elderly artisan in a leather apron, looking thoughtfully out a window with soft Rembrandt lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0uLrgTUb1kzBhltBjkX9xvzcBTYdZA7hTjtsILWFda5_FX9NctTy07pCNQkQYN6quY0xThaRS_5t5V-1CmFHTuqmY3qk5d087yScX0n3W5wvqJ6FmV0dXvwKfWCiVHuR0FsscEdtu4BdBNWjlufvOZOkPbvAFfmS0Z-QJb9yRvP7JkJLMUJCDud_KliPPM2KaABySWAHpbrjwthAqjvjNZiqYwcrO0br9GfUgCJSuMf8byBdcQrXQI7VSCrGYpY-0goU3kdnkRWE"/>
+</div>
+</div>
+</section>
+<!-- Final CTA / Statement -->
+<section class="py-32 bg-surface-container-low text-center px-8">
+<div class="max-w-2xl mx-auto">
+<h2 class="serif-tight text-3xl md:text-5xl mb-12">The journey begins with a single measurement.</h2>
+<button class="bg-gradient-to-br from-[#e9c176] to-[#c5a059] text-on-primary-container px-12 py-5 rounded-sm label-tracking text-[11px] uppercase font-bold transition-all duration-500 soft-scale shadow-[0_10px_40px_-10px_rgba(233,193,118,0.3)] hover:shadow-[0_15px_60px_-10px_rgba(233,193,118,0.5)]">
+                    Book An Appointment
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] dark:bg-[#0e0e0e] flex flex-col items-center py-20 px-8 gap-8 w-full">
+<div class="text-xl font-serif text-[#e9c176] uppercase tracking-widest">ADEN</div>
+<div class="flex flex-wrap justify-center gap-12">
+<a class="text-[10px] tracking-widest uppercase text-stone-500 hover:text-white transition-colors duration-400" href="#">Privacy Policy</a>
+<a class="text-[10px] tracking-widest uppercase text-stone-500 hover:text-white transition-colors duration-400" href="#">Terms of Service</a>
+<a class="text-[10px] tracking-widest uppercase text-stone-500 hover:text-white transition-colors duration-400" href="#">Shipping &amp; Returns</a>
+<a class="text-[10px] tracking-widest uppercase text-stone-500 hover:text-white transition-colors duration-400" href="#">Instagram</a>
+</div>
+<p class="text-[10px] tracking-widest uppercase text-stone-600 mt-8">© 2024 ADEN BESPOKE. ALL RIGHTS RESERVED.</p>
+</footer>
+</body></html>
