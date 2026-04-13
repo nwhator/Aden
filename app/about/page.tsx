@@ -101,7 +101,10 @@ export default function AboutPage() {
       <section className="px-6 py-24 md:px-12">
         <div className="mx-auto max-w-6xl flex flex-col gap-16 lg:flex-row lg:items-center">
           <div className="order-2 lg:order-1">
-            <span className="material-symbols-outlined text-primary text-5xl">format_quote</span>
+            <svg viewBox="0 0 24 24" className="text-primary mb-8 h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M7 7h4v4H5V9a2 2 0 0 1 2-2z" />
+              <path d="M18 7h-4v4h6V9a2 2 0 0 0-2-2z" />
+            </svg>
             <blockquote className="mt-8 text-3xl font-serif italic leading-tight text-onSurface sm:text-4xl">
               &quot;In a world of mass-produced noise, a bespoke shoe is a quiet conversation between the maker and the wearer. We don&apos;t just build footwear; we map a life.&quot;
             </blockquote>

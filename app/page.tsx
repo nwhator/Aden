@@ -147,7 +147,10 @@ export default function HomePage() {
 
       <section className="bg-surfaceContainerLow py-24 px-6 md:px-12">
         <div className="mx-auto max-w-4xl text-center space-y-12">
-          <span className="material-symbols-outlined text-4xl text-primary">format_quote</span>
+          <svg viewBox="0 0 24 24" className="mx-auto h-10 w-10 text-primary" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M7 7h4v4H5V9a2 2 0 0 1 2-2z" />
+            <path d="M18 7h-4v4h6V9a2 2 0 0 0-2-2z" />
+          </svg>
           <blockquote className="text-3xl font-serif italic leading-relaxed text-stone-200 sm:text-4xl">
             &quot;The fit is beyond anything off-the-shelf. ADEN doesn&apos;t just make shoes; they create a companion for the journey ahead.&quot;
           </blockquote>

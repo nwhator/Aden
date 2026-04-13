@@ -21,7 +21,11 @@ export default function Navbar() {
         </nav>
         <div className="flex items-center gap-5 text-primary">
           <Link href="/shop" className="inline-flex items-center justify-center rounded-full p-2 transition-transform hover:scale-105">
-            <span className="material-symbols-outlined">shopping_bag</span>
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M6 7V6a6 6 0 0 1 12 0v1" />
+              <path d="M5 7h14l-1.5 14h-11L5 7z" />
+              <path d="M9 11h6" />
+            </svg>
           </Link>
         </div>
       </div>
